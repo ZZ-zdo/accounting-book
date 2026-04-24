@@ -8,7 +8,7 @@
 
 ### 1.1 程序整体架构
 
-本程序在实验一的基础上新增了语义分析模块。`syntax.y` 中所有产生式动作仅负责构造抽象语法树，不含任何语义逻辑；全部语义分析代码集中于 `semantic.c` 与 `semantic.h`，`main` 函数在 `yyparse()` 完成后调用 `semantic_analyze(root)` 启动语义分析。
+本程序在实验一的基础上新增了语义分析模块。`syntax.y` 中所有产生式动作仅负责构造抽象语法树，不含任何语义逻辑；全部语义分析代码集中于 `semantic.c` 与 `semantic.h`，`main` 函数在`syntax.y`中， 调用 `semantic_analyze(root)` 启动语义分析。
 
 ### 1.2 符号表设计
 
